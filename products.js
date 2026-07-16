@@ -8,7 +8,7 @@
 //        (leave as-is to use the placeholder illustration)
 // ─────────────────────────────────────────────────────────────
 
-const WHATSAPP_NUMBER = "60123456789"; // <-- replace with your number, country code, no + or spaces
+const WHATSAPP_NUMBER = "60122923954"; // <-- replace with your number, country code, no + or spaces
 
 const PRODUCTS = [
   {
