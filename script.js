@@ -30,9 +30,6 @@ function renderProducts() {
         </div>
         <h3 class="card-name">${product.name}</h3>
         <p class="card-desc">${product.description}</p>
-        <a class="card-cta" href="${waLink(product.name)}" target="_blank" rel="noopener">
-          Order on WhatsApp
-        </a>
       </div>
     `;
     frag.appendChild(card);
