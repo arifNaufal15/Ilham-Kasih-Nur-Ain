@@ -1,4 +1,4 @@
-# Petal & Stem — Bouquet Catalog
+# Ilham Kasih Nur Ain — Bouquet Catalog
 
 A static two-page site for a flower bouquet business. No backend, no database, no auth — just HTML/CSS/JS.
 
