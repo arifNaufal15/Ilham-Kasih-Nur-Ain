@@ -88,11 +88,5 @@ const PRODUCTS = [
     price: 72,
     image: "images/bouquet-13.jpg",
     description: "Orange ranunculus and yellow spray roses with fresh greenery."
-  },
-  {
-    name: "Morning Citrus",
-    price: 72,
-    image: "images/bouquet-14.jpg",
-    description: "Orange ranunculus and yellow spray roses with fresh greenery."
   }
 ];
