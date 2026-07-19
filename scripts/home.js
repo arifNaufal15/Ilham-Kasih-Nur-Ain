@@ -1,5 +1,6 @@
-// Home page only: picks 6 random bouquets from the full catalog and
-// reveals the "see full catalog" button if there are more to see.
+// Home page only: picks random bouquets from the full catalog
+// (6 on desktop/tablet, 4 on mobile) and reveals the "see full
+// catalog" button if there are more to see.
 
 function pickRandom(arr, count) {
   const copy = arr.slice();
@@ -10,10 +11,14 @@ function pickRandom(arr, count) {
   return copy.slice(0, count);
 }
 
+function getFeaturedCount() {
+  return window.innerWidth <= 768 ? 4 : 6;
+}
+
 function renderFeatured() {
   const grid = document.getElementById("product-grid");
   const showMoreWrap = document.getElementById("show-more-wrap");
-  const featured = pickRandom(PRODUCTS, 6);
+  const featured = pickRandom(PRODUCTS, getFeaturedCount());
 
   const frag = document.createDocumentFragment();
   featured.forEach((product, i) => frag.appendChild(createProductCard(product, i)));
