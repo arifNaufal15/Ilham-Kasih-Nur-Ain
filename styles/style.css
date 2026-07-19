@@ -46,6 +46,35 @@ a { color: inherit; }
 .sprig-slot { display: flex; justify-content: center; color: var(--sage); margin: 0 auto; }
 .sprig { width: 120px; height: 24px; color: inherit; }
 
+/* ── Site nav ─────────────────────────────────────────────── */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 6vw;
+  border-bottom: 1px solid rgba(43, 43, 40, 0.08);
+}
+
+.site-nav-mark {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.site-nav-link {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--sage-deep);
+  border-bottom: 1.5px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.site-nav-link:hover { color: var(--gold); border-color: var(--gold); }
+
 /* ── Hero ─────────────────────────────────────────────────── */
 .hero {
   position: relative;
@@ -144,6 +173,23 @@ a { color: inherit; }
   gap: 2.2rem;
 }
 
+/* ── Show more (home page) ────────────────────────────────── */
+.show-more-wrap { text-align: center; margin-top: 3rem; }
+
+.show-more-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #FFFDF8;
+  background: var(--sage);
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.show-more-btn:hover { background: var(--sage-deep); transform: translateY(-2px); }
+
 /* ── Card ─────────────────────────────────────────────────── */
 .card {
   background: var(--card-bg);
@@ -162,7 +208,7 @@ a { color: inherit; }
 }
 
 .card-image-wrap {
-  aspect-ratio: 4 / 3.1;
+  aspect-ratio: 4 / 3.5;
   background: var(--blush);
   overflow: hidden;
 }
@@ -173,7 +219,7 @@ a { color: inherit; }
   object-fit: cover;
 }
 
-.card-body { padding: 1.4rem 1.4rem 1.6rem; position: relative; }
+.card-body { padding: 1rem 1.4rem 1.6rem; position: relative; }
 
 .card-tag {
   position: absolute;
@@ -268,6 +314,102 @@ a { color: inherit; }
   color: var(--sage-deep);
   font-size: 1.1rem;
   margin-bottom: 0.2rem;
+}
+
+/* ── Catalog page header ──────────────────────────────────── */
+.catalog-header {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5vh 6vw 1vh;
+  text-align: center;
+}
+
+.catalog-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin: 0.6rem 0 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.catalog-subtitle {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ── Catalog toolbar ──────────────────────────────────────── */
+.catalog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.2rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.toolbar-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1 1 140px;
+}
+
+.toolbar-search { flex: 2 1 220px; }
+
+.toolbar-field label {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.toolbar-field input,
+.toolbar-field select {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  color: var(--ink);
+  border: 1px solid rgba(43, 43, 40, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.7rem;
+  background: var(--ivory);
+}
+
+.toolbar-field input:focus,
+.toolbar-field select:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 1px;
+}
+
+.toolbar-reset {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--sage-deep);
+  background: none;
+  border: 1px solid rgba(43, 43, 40, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.62rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.toolbar-reset:hover { background: var(--sage); color: #FFFDF8; border-color: var(--sage); }
+
+.catalog-empty {
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 3rem 1rem;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 640px) {
+  .catalog-toolbar { flex-direction: column; align-items: stretch; }
+  .toolbar-reset { align-self: flex-start; }
 }
 
 /* ── Footer ───────────────────────────────────────────────── */

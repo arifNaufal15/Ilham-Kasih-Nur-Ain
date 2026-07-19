@@ -1,6 +1,13 @@
 # Petal & Stem — Bouquet Catalog
 
-A static catalog page for a flower bouquet business. No backend, no database, no auth — just HTML/CSS/JS.
+A static two-page site for a flower bouquet business. No backend, no database, no auth — just HTML/CSS/JS.
+
+## Pages
+
+- **`index.html`** — home page. Shows 6 random bouquets each visit, with a "See the full catalog" button.
+- **`catalog.html`** — the full catalog. Search, price filter, and sort by price.
+
+Both pages read from the same `products.js`, so you only ever edit one file to add, remove, or change bouquets.
 
 ## Before you deploy
 
@@ -9,13 +16,22 @@ A static catalog page for a flower bouquet business. No backend, no database, no
    const WHATSAPP_NUMBER = "60123456789"; // your number, country code, no + or spaces
    ```
 
-2. **Add your bouquets** — still in `products.js`, edit the `PRODUCTS` list. Each item needs a `name`, `price`, `image`, and `description`. Copy an existing entry to add a new one, or delete one to remove it.
+2. **Add your bouquets** — still in `products.js`, edit the `PRODUCTS` list. Each item needs a `name`, `price`, `image`, and `description`. Copy an existing entry to add a new one, or delete one to remove it. Both pages update automatically.
 
-3. **Add real photos** — drop your photos into the `images/` folder (e.g. `images/blush-peony.jpg`), then point to them from `products.js`:
+3. **Add real photos** — drop your photos into the `images/` folder, then point to them from `products.js`:
    ```js
    image: "images/blush-peony.jpg",
    ```
-   The placeholder SVGs are just there so the page isn't empty — swap them out.
+
+## Catalog page search syntax
+
+The search box on `catalog.html` matches against each bouquet's name and description:
+
+- `rose` — only bouquets mentioning "rose"
+- `no rose` or `-rose` — excludes bouquets mentioning "rose"
+- `rose no chocolate` — bouquets mentioning "rose", excluding any mentioning "chocolate"
+
+Combine with the price fields and the sort dropdown — all three work together live.
 
 ## Preview it locally (optional)
 
@@ -39,9 +55,12 @@ Just open `index.html` in a browser — no build step needed.
 ## File structure
 
 ```
-index.html      — page structure
+index.html      — home page (6 random bouquets + show-more button)
+catalog.html    — full catalog page (search, filter, sort)
 style.css       — all styling
 products.js     — YOUR CATALOG DATA (edit this to update bouquets)
-script.js       — renders the catalog from products.js, builds WhatsApp links
+common.js       — shared: product card rendering, sprig motif, footer WhatsApp link
+home.js         — home page logic (random 6 + show-more)
+catalog.js      — catalog page logic (search, price filter, sort)
 images/         — bouquet photos
 ```
