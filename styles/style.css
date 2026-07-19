@@ -355,10 +355,10 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  flex: 1 1 140px;
+  flex: 1 1 10px;
 }
 
-.toolbar-search { flex: 2 1 220px; }
+.toolbar-search { flex: 2 1 10px; }
 
 .toolbar-field label {
   font-family: var(--sans);
