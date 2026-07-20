@@ -88,5 +88,59 @@ const PRODUCTS = [
     price: 72,
     image: "images/bouquet-13.jpg",
     description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-14.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-15.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-16.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-17.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-18.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-19.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-20.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-21.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
+  },
+  {
+    name: "Morning Citrus",
+    price: 72,
+    image: "images/bouquet-22.jpg",
+    description: "Orange ranunculus and yellow spray roses with fresh greenery."
   }
 ];
